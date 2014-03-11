@@ -10,7 +10,6 @@ package net.faustinelli.j8_lambda.cps.callback;
  * 
  * TODO - implement it as kind of FutureCallback
  */
-@SuppressWarnings("unused")
 public class Feedback {
 
 	private DownloadConfirmation onConfirm;
@@ -23,5 +22,13 @@ public class Feedback {
 
 	public Feedback(Runnable onRefuse) {
 		this(() -> {}, onRefuse);
+	}
+	
+	public void onConfirm() {
+		this.onConfirm.confirmDownload();
+	}
+	
+	public void onRefuse() {
+		this.onRefuse.run();
 	}
 }
