@@ -1,5 +1,9 @@
 package net.faustinelli.j8_lambda.cps.provider;
 
-public class HtmlClient {
+import net.faustinelli.j8_lambda.cps.mvc.RssFeed;
+
+public interface HtmlClient {
+
+	public RssFeed get();
 
 }
